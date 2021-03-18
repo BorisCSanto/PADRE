@@ -1,0 +1,56 @@
+@import "./variables";
+@import "./keyframes";
+
+
+.conteneur {
+    &-tete {
+        display: flex;
+        flex-direction: column;
+        gap: 30px 50px;
+        
+       &-titre {
+            width: 62%;
+            margin: auto;
+            border-bottom: 2px solid $couleur_titre;
+           &-titre {
+           color: $couleur_titre;
+           text-align: center;
+           }
+       }
+       
+       &-bloc {
+            width: 62%; 
+            margin: auto;
+            text-align: center;;
+            &-tapis {
+                display: inline-block;
+                width: 12%;
+                font-size: 6em;
+                font-family: "Ubuntu";
+                text-shadow: 7px 3px #558ABB;
+                &-1 {
+                    animation: galerieG 1s ease;
+                }
+                &-2 {
+                    animation: galerieA 1.2s ease;
+                }
+                &-3 {
+                    animation: galerieL 1.4s ease;
+                }
+                &-4 {
+                    animation: galerieE 1.6s ease;
+                }
+                &-5 {
+                    animation: galerieR 1.8s ease;
+                }
+                &-6 {
+                    animation: galerieI 2s ease;
+                }
+                &-7 {
+                    animation: galerieEE 2.2s ease;
+                }
+            } 
+        }
+    }
+}
+
