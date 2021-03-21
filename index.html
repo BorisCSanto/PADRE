@@ -50,8 +50,50 @@
 		
 		<!-- galerie images -->
 		<div class="galerie">
-			
+			<script>
+				function passedroite() {
+					let source = document.getElementById("grand").src;
+					source = source.replace(".png","");
+					num = parseInt(source.substr(source.length - 1))
+					num > 5 ? num = 1 : num++;
+					document.getElementById("grand").src = "images/"+num+".png"
+				}
 
+				function passegauche() {
+					let source = document.getElementById("grand").src;
+					source = source.replace(".png","");
+					num = parseInt(source.substr(source.length - 1))
+					num < 2 ? num = 6 : num--;
+					document.getElementById("grand").src = "images/"+num+".png"
+				}
+			</script>
+			<!-- grande image -->
+			<div class="galerie-grand">
+				<div class="galerie-grand-fleche">
+					<div class="galerie-grand-fleche-gauche" onclick="passegauche()"></div>
+				</div>
+				<div class="galerie-grand-img">
+					<img id="grand" class="galerie-grand-img-img" src="images/1.png" />
+				</div>
+				<div class="galerie-grand-fleche">
+					<div class="galerie-grand-fleche-droite" onclick="passedroite()"></div>
+				</div>
+			</div>
+			<!-- galerie de miniatures cliquables -->
+			<div id="galerie" class="galerie-miniatures">
+
+			</div>
+			<script>
+				function change(e) {
+					document.getElementById("grand").src = "images/"+e+".png";
+				}
+				const galerie = document.getElementById("galerie");
+				let insert = ''
+				for(i=1;i<7;i++) {
+					insert += "<div class=\"galerie-miniatures-img\" onclick=\"change("+i+")\" ><img class=\"galerie-miniatures-img-mini\" src=\"images/"+i+".png\" /></div>";
+				}
+				galerie.innerHTML = insert;
+			</script>
 		</div>
 	</body>
 </html>
