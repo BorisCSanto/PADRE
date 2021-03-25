@@ -19,35 +19,102 @@
 		<!-- Conteneur de l'entete -->
 		<div class="conteneur">
 			<div class="conteneur-tete">
-				<div class="conteneur-tete-titre">
-					<h1 class="conteneur-tete-titre-titre">Je suis un titre</h1>
-				</div>
+				<nav class="conteneur-tete-titre">
+					<div></div>
+					<a href="" class="conteneur-tete-titre-titre">Déco d'intérieur</a>
+					<a href="" class="conteneur-tete-titre-titre">Contact</a>
+					<div class="conteneur-tete-titre-titre conteneur-tete-titre-titre-liste">Toutes les séries
+						<div>
+						<a href="">Série 1</a>
+						<a href="">Série 2</a>
+						<a href="">Série 3</a>
+						</div>
+					</div>
+					<span class="conteneur-tete-titre-icon"><i ></i></span>
+					<span class="conteneur-tete-titre-icon"><i ></i></span>
+					<span class="conteneur-tete-titre-icon"><i ></i></span>
+					<span class="conteneur-tete-titre-icon"><i ></i></span>
+				</nav>
 				<div class="conteneur-tete-bloc">
 					<div id="1" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-1">
-						G
-					</div>
-					<div id="2" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-2">
-						A
-					</div>
-					<div id="3" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-3">
 						L
 					</div>
-					<div id="4" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-4">
-						E
+					<div id="2" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-2">
+						o
 					</div>
+					<div id="3" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-3">
+						ï
+					</div>
+					<div id="4" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-4">
+						c
+					</div>
+					<br>
 					<div id="5" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-5">
-						R
+						L
 					</div>
 					<div id="6" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-6">
-						i
+						e
+					</div>
+					<div id="5" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-5">
+						
 					</div>
 					<div id="7" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-7">
-						E
+						G
+					</div>
+					<div id="7" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-7">
+						u
+					</div>
+					<div id="7" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-7">
+						é
+					</div>
+					<div id="7" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-7">
+						v
+					</div>
+					<div id="7" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-7">
+						e
+					</div>
+					<div id="7" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-7">
+						L
 					</div>
 				</div>
 			</div>
 		</div>
-		
+
+
+		<!-- biographie courte -->
+		<div class="bio">
+			<p class="bio-spe">~</p>
+			<p class="bio-texte">Né au petit matin au pied du grand chêne du village de Plougarnel, Loïc Le Guével
+				a grandi auprès des mages de bretagne et du monde. Ce qu'il a vu, ce qui l'a enchanté, il vous le retranscrit
+				dans ses œuvres intemporelles et énigmatiques.<br>Il nous transporte de la profondeur de la forêt à la morne
+				platitude du désert, en passant par le jeu des poissons dans la mer d'Iroise.
+			</p>
+			<p class="bio-spe">~</p>
+		</div>
+
+		<!-- vignettes series -->
+
+		<div class="conteneur_series">
+			<a href="" class="conteneur_series-vignette">
+				<h3>Série 1</h3>
+				<p class="bio-texte bio-texte-vignette">
+					Blablabla bla bla la serie est très très belle parmi sa dentelle
+				</p>
+			</a>
+			<a href="" class="conteneur_series-vignette">
+				<h3>Série 2</h3>
+				<p class="bio-texte bio-texte-vignette">
+					Blablabla bla bla la serie est très très triste au milieu des artistes
+				</p>
+			</a>
+			<a href="" class="conteneur_series-vignette">
+				<h3>Série 3</h3>
+				<p class="bio-texte bio-texte-vignette">
+					Blablabla bla bla la serie se montre plus hardie le lundi
+				</p>
+			</a>
+
+		</div>
 		<!-- galerie images -->
 		<div class="galerie">
 			<script>
@@ -80,8 +147,10 @@
 				</div>
 			</div>
 			<!-- galerie de miniatures cliquables -->
-			<div id="galerie" class="galerie-miniatures">
+			<div class="galerie-miniatures">
+				<div id="galerie">
 
+				</div>
 			</div>
 			<script>
 				function change(e) {
@@ -92,8 +161,16 @@
 				for(i=1;i<7;i++) {
 					insert += "<div class=\"galerie-miniatures-img\" onclick=\"change("+i+")\" ><img class=\"galerie-miniatures-img-mini\" src=\"images/"+i+".png\" /></div>";
 				}
+				for(i=1;i<7;i++) {
+					insert += "<div class=\"galerie-miniatures-img\" onclick=\"change("+i+")\" ><img class=\"galerie-miniatures-img-mini\" src=\"images/"+i+".png\" /></div>";
+				}
 				galerie.innerHTML = insert;
 			</script>
 		</div>
+		<footer>
+			<div>Apropos - mentions légales</div>
+			<div>Copyright</div>
+			<div>Conception</div>
+		</footer>
 	</body>
 </html>

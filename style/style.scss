@@ -2,29 +2,79 @@
 @import "./keyframes";
 
 
+body {
+    font-family: "Ubuntu";
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .conteneur {
     &-tete {
         display: flex;
         flex-direction: column;
         gap: 30px 50px;
         
-       &-titre {
-            width: 62%;
-            margin: auto;
-            border-bottom: 2px solid $couleur_titre;
-           &-titre {
-           color: $couleur_titre;
-           text-align: center;
+        &-titre {
+            //border-bottom: 2px solid $couleur_titre;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            color: $couleur_titre;
+            padding: 2% 0 2% 0;
+
+            &-titre {
+                margin: auto;
+                color: inherit;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 20px;
+                text-align: center;
+                padding: 10px 0 10px 0;
+                border-radius: 3px;
+                width: 100%;
+                &:hover {
+                    background-color: $couleur_titre;
+                    color: white;
+                }
+
+                &-liste {
+                    display: flex;
+                    flex-direction: column;
+                    div {
+                        position: absolute;
+                        display: none;
+                        z-index:1;
+                        margin-top: 30px;
+                        background-color: white;
+                        padding: 10px 0 10px 0;
+                        
+                        
+                        width: 20%;
+                        a {
+                            display: block;
+                            margin-top: 10px;
+                            width: 100%;
+                        }
+                    }
+
+                    &:hover div {
+                        display: block;
+                        color: $couleur_titre;
+                    }
+                }
+
            }
        }
        
        &-bloc {
-            width: 62%; 
+            width: 80%; 
             margin: auto;
             text-align: center;;
             &-tapis {
                 display: inline-block;
-                width: 12%;
+                width: 10%;
                 font-size: 6em;
                 font-family: "Ubuntu";
                 text-shadow: 7px 3px #558ABB;
@@ -52,6 +102,46 @@
             } 
         }
     }
+}
+
+.conteneur_series {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    width: 90%;
+    margin: auto;
+
+    &-vignette {
+        background-color: $couleur_secondaire;
+        h3 {
+            text-align: center;
+        }
+    }
+}
+
+.bio {
+    width: 80%;
+    margin: auto;
+    &-texte {
+        text-align: center;
+        font-style: italic;
+        font-size: 25px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        line-height: 50px;
+        letter-spacing: 5px;
+        word-spacing: 20px;
+
+        &-vignette {
+            color: white;
+        }
+    }
+    &-spe {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        margin: 0;
+        text-align: center;
+        font-size: 150px;
+    }
+    
 }
 
 .galerie {
@@ -97,9 +187,14 @@
     }
 
     &-miniatures {
-        display: flex;
-        gap: 10px;
-        margin: auto;
+        #galerie {
+            display: flex;
+            overflow-x: scroll;
+            gap: 20px;
+            margin: 2%;
+            height: 120px;
+        }
+        
         &-img {
             height: 100px;
             &-mini {
@@ -110,3 +205,14 @@
     }
 }
 
+footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: $couleur_titre;
+    color: white;
+
+    div {
+        font-size: 20px;
+        text-align: center;
+    }
+}
