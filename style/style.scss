@@ -47,7 +47,6 @@ a {
                         display: none;
                         z-index:1;
                         margin-top: 30px;
-                        background-color: white;
                         padding: 10px 0 10px 0;
                         
                         
@@ -206,6 +205,7 @@ a {
 }
 
 footer {
+    margin-top: 10%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     background-color: $couleur_titre;

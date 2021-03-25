@@ -13,21 +13,22 @@
 		<meta property="og:type" content="" />
 		<meta property="og:url" content="" />
 		<meta property="og:image" content="" />
-		<script type="text/javascript" src=""></script>
 	</head>
 	<body>
 		<!-- Conteneur de l'entete -->
-		<div class="conteneur">
+		<div class="conteneur" id="app">
 			<div class="conteneur-tete">
 				<nav class="conteneur-tete-titre">
-					<div></div>
-					<a href="" class="conteneur-tete-titre-titre">Déco d'intérieur</a>
-					<a href="" class="conteneur-tete-titre-titre">Contact</a>
+					<div>
+						<router-link to="/">logo</router-link>
+					</div>
+					<router-link to="/interieur" class="conteneur-tete-titre-titre">Déco d'intérieur</router-link>
+					<router-link to="/contact" class="conteneur-tete-titre-titre">Contact</router-link>
 					<div class="conteneur-tete-titre-titre conteneur-tete-titre-titre-liste">Toutes les séries
 						<div>
-						<a href="">Série 1</a>
-						<a href="">Série 2</a>
-						<a href="">Série 3</a>
+						<router-link to="/galerie/0">Série 1</router-link>
+						<router-link to="/galerie/1">Série 2</router-link>
+						<router-link to="/galerie/2">Série 3</router-link>
 						</div>
 					</div>
 					<span class="conteneur-tete-titre-icon"><i ></i></span>
@@ -35,6 +36,15 @@
 					<span class="conteneur-tete-titre-icon"><i ></i></span>
 					<span class="conteneur-tete-titre-icon"><i ></i></span>
 				</nav>
+				<router-view></router-view>
+			</div>
+		</div>
+
+			<!-- page d'accueil -->
+		<script type="text/x-template" id="accueil">
+		
+		<div>
+			<div class="conteneur">
 				<div class="conteneur-tete-bloc">
 					<div id="1" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-1">
 						L
@@ -78,99 +88,93 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		
 
 
-		<!-- biographie courte -->
-		<div class="bio">
-			<p class="bio-spe">~</p>
-			<p class="bio-texte">Né au petit matin au pied du grand chêne du village de Plougarnel, Loïc Le Guével
-				a grandi auprès des mages de bretagne et du monde. Ce qu'il a vu, ce qui l'a enchanté, il vous le retranscrit
-				dans ses œuvres intemporelles et énigmatiques.<br>Il nous transporte de la profondeur de la forêt à la morne
-				platitude du désert, en passant par le jeu des poissons dans la mer d'Iroise.
-			</p>
-			<p class="bio-spe">~</p>
-		</div>
-
-		<!-- vignettes series -->
-
-		<div class="conteneur_series">
-			<a href="" class="conteneur_series-vignette">
-				<h3>Série 1</h3>
-				<p class="bio-texte bio-texte-vignette">
-					Blablabla bla bla la serie est très très belle parmi sa dentelle
+			<!-- biographie courte -->
+			<div class="bio">
+				<p class="bio-spe">~</p>
+				<p class="bio-texte">Né un matin au pied du grand chêne du village de Plougarnel, Loïc Le Guével
+					a grandi auprès des mages de bretagne et du monde. Ce qu'il a vu, ce qui l'a enchanté, il vous le retranscrit
+					dans ses œuvres intemporelles et énigmatiques.<br>Il nous transporte de la profondeur de la forêt à la morne
+					platitude du désert, en passant par le jeu des poissons dans la mer d'Iroise.
 				</p>
-			</a>
-			<a href="" class="conteneur_series-vignette">
-				<h3>Série 2</h3>
-				<p class="bio-texte bio-texte-vignette">
-					Blablabla bla bla la serie est très très triste au milieu des artistes
-				</p>
-			</a>
-			<a href="" class="conteneur_series-vignette">
-				<h3>Série 3</h3>
-				<p class="bio-texte bio-texte-vignette">
-					Blablabla bla bla la serie se montre plus hardie le lundi
-				</p>
-			</a>
+				<p class="bio-spe">~</p>
+			</div>
 
+			<!-- vignettes series -->
+
+			<div class="conteneur_series">
+				<a href="" class="conteneur_series-vignette">
+					<h3>Série 1</h3>
+					<p class="bio-texte bio-texte-vignette">
+						Blablabla bla bla la serie est très très belle parmi sa dentelle
+					</p>
+				</a>
+				<a href="" class="conteneur_series-vignette">
+					<h3>Série 2</h3>
+					<p class="bio-texte bio-texte-vignette">
+						Blablabla bla bla la serie est très très triste au milieu des artistes
+					</p>
+				</a>
+				<a href="" class="conteneur_series-vignette">
+					<h3>Série 3</h3>
+					<p class="bio-texte bio-texte-vignette">
+						Blablabla bla bla la serie se montre plus hardie le lundi
+					</p>
+				</a>
+
+			</div>
 		</div>
+		</script>
+
 		<!-- galerie images -->
+		<script type="text/x-template" id="galerie">
 		<div class="galerie">
-			<script>
-				function passedroite() {
-					let source = document.getElementById("grand").src;
-					source = source.replace(".png","");
-					num = parseInt(source.substr(source.length - 1))
-					num > 5 ? num = 1 : num++;
-					document.getElementById("grand").src = "images/"+num+".png"
-				}
-
-				function passegauche() {
-					let source = document.getElementById("grand").src;
-					source = source.replace(".png","");
-					num = parseInt(source.substr(source.length - 1))
-					num < 2 ? num = 6 : num--;
-					document.getElementById("grand").src = "images/"+num+".png"
-				}
-			</script>
 			<!-- grande image -->
 			<div class="galerie-grand">
 				<div class="galerie-grand-fleche">
-					<div class="galerie-grand-fleche-gauche" onclick="passegauche()"></div>
+					<div class="galerie-grand-fleche-gauche" @click="passeGauche()"></div>
 				</div>
 				<div class="galerie-grand-img">
-					<img id="grand" class="galerie-grand-img-img" src="images/1.png" />
+					<img id="grand" class="galerie-grand-img-img" :src="imageactuelle.img" />
 				</div>
 				<div class="galerie-grand-fleche">
-					<div class="galerie-grand-fleche-droite" onclick="passedroite()"></div>
+					<div class="galerie-grand-fleche-droite" @click="passeDroite()"></div>
 				</div>
 			</div>
 			<!-- galerie de miniatures cliquables -->
 			<div class="galerie-miniatures">
 				<div id="galerie">
-
+					<div v-for="(oeuv, index) in serieaprendre" class="galerie-miniatures-img" @click="change(index)" ><img class="galerie-miniatures-img-mini" :src="oeuv.img" /></div>
 				</div>
 			</div>
-			<script>
-				function change(e) {
-					document.getElementById("grand").src = "images/"+e+".png";
-				}
-				const galerie = document.getElementById("galerie");
-				let insert = ''
-				for(i=1;i<7;i++) {
-					insert += "<div class=\"galerie-miniatures-img\" onclick=\"change("+i+")\" ><img class=\"galerie-miniatures-img-mini\" src=\"images/"+i+".png\" /></div>";
-				}
-				for(i=1;i<7;i++) {
-					insert += "<div class=\"galerie-miniatures-img\" onclick=\"change("+i+")\" ><img class=\"galerie-miniatures-img-mini\" src=\"images/"+i+".png\" /></div>";
-				}
-				galerie.innerHTML = insert;
-			</script>
 		</div>
+		</script>
+
+		<!-- décoration d'intérieur -->
+		<script type="text/x-template" id="interieur">
+			<div>
+				bienvenue à la déco d'interieur
+			</div>
+		</script>
+
+		<!-- contact et formulaire de contact -->
+		<script type="text/x-template" id="contact">
+			<div>
+				bienvenue dans le formulaire de contact
+			</div>
+		</script>
+
 		<footer>
 			<div>Apropos - mentions légales</div>
 			<div>Copyright</div>
 			<div>Conception</div>
 		</footer>
+
+		<script src="codes/dist.js"></script>
+		<script src="codes/router.js"></script>
+		<script src="codes/content.js"></script>
+		<script src="codes/vue.js"></script>
 	</body>
 </html>

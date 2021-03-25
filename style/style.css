@@ -213,7 +213,6 @@ a {
   display: none;
   z-index: 1;
   margin-top: 30px;
-  background-color: white;
   padding: 10px 0 10px 0;
   width: 20%;
 }
@@ -397,6 +396,7 @@ a {
 }
 
 footer {
+  margin-top: 10%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
