@@ -1,4 +1,8 @@
-const cles = [ "Série 1", "Série 2", "Série 3"]
+const cles = [ 
+    { nom: "Série 1", texte: "La serie est très très belle parmi sa dentelle", dir: "/galerie/0"},
+    { nom: "Série 2", texte: "La serie est très très triste au milieu des artistes", dir: "/galerie/1"},
+    { nom: "Série 3", texte: "La serie se montre plus hardie le lundi", dir: "/galerie/2"}
+]
 
 const series = {
         "Série 1": [

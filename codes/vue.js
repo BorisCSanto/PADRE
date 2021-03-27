@@ -2,6 +2,12 @@
 const accueil = {
     template: '#accueil',
     name: 'Accueil',
+    data: () => {
+        return {
+            cles,
+            texte
+        }
+    }
 }
 
 
@@ -17,7 +23,7 @@ const galerie = {
     },
     computed: {
         serieaprendre () {
-            let cle = cles[parseInt(this.$route.params.serie)]
+            let cle = cles[parseInt(this.$route.params.serie)].nom
             return series[cle]
         },
         imageactuelle () {

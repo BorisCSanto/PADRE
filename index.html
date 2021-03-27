@@ -19,12 +19,12 @@
 		<div class="conteneur" id="app">
 			<div class="conteneur-tete">
 				<nav class="conteneur-tete-titre">
-					<div>
+					<div class="conteneur-tete-titre-logo">
 						<router-link to="/">logo</router-link>
 					</div>
-					<router-link to="/interieur" class="conteneur-tete-titre-titre">Déco d'intérieur</router-link>
-					<router-link to="/contact" class="conteneur-tete-titre-titre">Contact</router-link>
-					<div class="conteneur-tete-titre-titre conteneur-tete-titre-titre-liste">Toutes les séries
+					<router-link  id="menu1" to="/interieur" class="conteneur-tete-titre-titre">Déco d'intérieur</router-link>
+					<router-link id="menu2" to="/contact" class="conteneur-tete-titre-titre">Contact</router-link>
+					<div class="conteneur-tete-titre-titre conteneur-tete-titre-titre-liste"><span id="menu3">Toutes les séries</span>
 						<div>
 						<router-link to="/galerie/0">Série 1</router-link>
 						<router-link to="/galerie/1">Série 2</router-link>
@@ -59,31 +59,31 @@
 						c
 					</div>
 					<br>
-					<div id="5" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-5">
+					<div id="5" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-1">
 						L
 					</div>
-					<div id="6" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-6">
+					<div id="6" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-2">
 						e
 					</div>
-					<div id="5" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-5">
+					<div id="7" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-2">
 						
 					</div>
-					<div id="7" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-7">
+					<div id="8" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-3">
 						G
 					</div>
-					<div id="7" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-7">
+					<div id="9" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-4">
 						u
 					</div>
-					<div id="7" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-7">
+					<div id="10" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-5">
 						é
 					</div>
-					<div id="7" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-7">
+					<div id="11" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-6">
 						v
 					</div>
-					<div id="7" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-7">
+					<div id="12" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-6">
 						e
 					</div>
-					<div id="7" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-7">
+					<div id="13" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-7 ">
 						L
 					</div>
 				</div>
@@ -94,10 +94,7 @@
 			<!-- biographie courte -->
 			<div class="bio">
 				<p class="bio-spe">~</p>
-				<p class="bio-texte">Né un matin au pied du grand chêne du village de Plougarnel, Loïc Le Guével
-					a grandi auprès des mages de bretagne et du monde. Ce qu'il a vu, ce qui l'a enchanté, il vous le retranscrit
-					dans ses œuvres intemporelles et énigmatiques.<br>Il nous transporte de la profondeur de la forêt à la morne
-					platitude du désert, en passant par le jeu des poissons dans la mer d'Iroise.
+				<p class="bio-texte">{{ texte.bio }}
 				</p>
 				<p class="bio-spe">~</p>
 			</div>
@@ -105,25 +102,12 @@
 			<!-- vignettes series -->
 
 			<div class="conteneur_series">
-				<a href="" class="conteneur_series-vignette">
-					<h3>Série 1</h3>
+				<router-link v-for="cle in cles" :to="cle.dir" class="conteneur_series-vignette">
+					<h3>{{ cle.nom }}</h3>
 					<p class="bio-texte bio-texte-vignette">
-						Blablabla bla bla la serie est très très belle parmi sa dentelle
+						{{ cle.texte }}
 					</p>
-				</a>
-				<a href="" class="conteneur_series-vignette">
-					<h3>Série 2</h3>
-					<p class="bio-texte bio-texte-vignette">
-						Blablabla bla bla la serie est très très triste au milieu des artistes
-					</p>
-				</a>
-				<a href="" class="conteneur_series-vignette">
-					<h3>Série 3</h3>
-					<p class="bio-texte bio-texte-vignette">
-						Blablabla bla bla la serie se montre plus hardie le lundi
-					</p>
-				</a>
-
+				</router-link>
 			</div>
 		</div>
 		</script>
@@ -174,6 +158,7 @@
 
 		<script src="codes/dist.js"></script>
 		<script src="codes/router.js"></script>
+		<script src="codes/fr.js"></script>
 		<script src="codes/content.js"></script>
 		<script src="codes/vue.js"></script>
 	</body>
