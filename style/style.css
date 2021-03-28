@@ -398,9 +398,9 @@ a {
 
 .galerie-grand-img-img {
   position: absolute;
-  border: 5px solid rgba(180, 14, 97, 0.5);
-  -webkit-box-shadow: -8px 4px 5px grey;
-          box-shadow: -8px 4px 5px grey;
+  border: 5px solid #b40e61;
+  -webkit-box-shadow: -8px 4px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: -8px 4px 5px rgba(0, 0, 0, 0.5);
   max-height: 100%;
   max-width: 100%;
 }

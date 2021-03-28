@@ -184,8 +184,8 @@ a {
             position: relative;
             &-img {
                 position: absolute;
-                border: 5px solid $couleur_tertiaire;
-                box-shadow: -8px 4px 5px grey;
+                border: 5px solid $couleur_secondaire;
+                box-shadow: -8px 4px 5px rgba(0, 0, 0,0.5);
                 max-height: 100%;
                 max-width: 100%;
             }
