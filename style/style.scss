@@ -76,7 +76,27 @@ a {
                         border-radius: 3px;
                     }
                 }
+           }
 
+           &-icon {
+               margin: auto;
+               display: grid;
+               grid-template-columns: repeat(4,1fr);
+               gap: 20px;
+
+               &-img{
+                 margin: auto;
+                 width: 2vw;
+                 img {
+                     width: 100%;
+                     border-radius: 3px;
+                     &:hover {
+                        border: 1px solid $couleur_secondaire;
+                        cursor: pointer;
+                    }
+                 }
+               } 
+               
            }
        }
        
