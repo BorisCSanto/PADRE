@@ -20,7 +20,7 @@
 			<div class="conteneur-tete">
 				<nav class="conteneur-tete-titre">
 					<div class="conteneur-tete-titre-logo">
-						<router-link to="/">logo</router-link>
+						<router-link to="/">L <span style="font-size: 60px;margin-left: -20%">L</span> <span style="margin-left: -20%;">G</span></router-link>
 					</div>
 					<router-link id="menu1" to="/interieur" class="conteneur-tete-titre-titre">Déco d'intérieur</router-link>
 					<router-link id="menu2" to="/contact" class="conteneur-tete-titre-titre">Contact</router-link>
@@ -118,12 +118,24 @@
 				</router-link>
 			</div>
 
-			<div id="deco" class="bio">
-				<p class="bio-spe">&#x2335;</p>
-				<p class="bio-texte">{{ texte.deco }}
-				</p>
-				<p class="bio-spe">&#x2335;</p>
+			<!-- presentation deco d'interieur -->
+			<div id="deco" >
+				<div class="bio">
+					<p class="bio-spe">&#x2335;</p>
+					<p class="bio-texte">{{ texte.deco }}
+					</p>
+					<p class="bio-spe">&#x2335;</p>
+				</div>
+				<div class="conteneur_series">
+					<div></div>
+					<router-link to="/interieur" class="conteneur_series-vignette">
+						<p class="bio-texte bio-texte-vignette">
+							Hôtel virtuel
+						</p>
+					</router-link>
+				</div>
 			</div>
+
 		</div>
 		</script>
 
@@ -181,6 +193,8 @@
 		<script src="codes/fr.js"></script>
 		<script src="codes/content.js"></script>
 		<script src="codes/vue.js"></script>
+
+		<!-- script pour le scroll event -->
 		<script>
 			window.addEventListener('scroll', () => {
 				const scrollable = document.documentElement.scrollHeight - window.innerHeight; // 568

@@ -1,6 +1,10 @@
 @import "./variables";
 @import "./keyframes";
 
+@font-face {
+    font-family: "Belle Police";
+    src: url("font/laurance.ttf") format("truetype");
+   }
 
 body {
     font-family: "Ubuntu";
@@ -26,6 +30,9 @@ a {
 
             &-logo {
                 margin: auto;
+                color: $couleur_secondaire;
+                font-size: 5em;
+                font-family: "Belle Police";
             }
 
             &-titre {

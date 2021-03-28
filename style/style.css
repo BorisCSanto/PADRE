@@ -170,6 +170,11 @@
   }
 }
 
+@font-face {
+  font-family: "Belle Police";
+  src: url("font/laurance.ttf") format("truetype");
+}
+
 body {
   font-family: "Ubuntu";
 }
@@ -201,6 +206,9 @@ a {
 
 .conteneur-tete-titre-logo {
   margin: auto;
+  color: #b40e61;
+  font-size: 5em;
+  font-family: "Belle Police";
 }
 
 .conteneur-tete-titre-titre {
