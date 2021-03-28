@@ -24,10 +24,15 @@ const galerie = {
     computed: {
         serieaprendre () {
             let cle = cles[parseInt(this.$route.params.serie)].nom
+            this.setActu()
             return series[cle]
+            
         },
         imageactuelle () {
             return this.serieaprendre[this.actu]
+        },
+        imagedefond () {
+            return cles[parseInt(this.$route.params.serie)].img
         }
     },
     methods: {
@@ -39,8 +44,11 @@ const galerie = {
         },
         change (i) {
             this.actu = i
+        },
+        setActu () {
+            this.actu = 0
         }
-    }
+    },
 }
 
 const contact = {

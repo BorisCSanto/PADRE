@@ -22,7 +22,7 @@
 					<div class="conteneur-tete-titre-logo">
 						<router-link to="/">logo</router-link>
 					</div>
-					<router-link  id="menu1" to="/interieur" class="conteneur-tete-titre-titre">Déco d'intérieur</router-link>
+					<a id="menu1" href="#deco" class="conteneur-tete-titre-titre">Déco d'intérieur</a>
 					<router-link id="menu2" to="/contact" class="conteneur-tete-titre-titre">Contact</router-link>
 					<div class="conteneur-tete-titre-titre conteneur-tete-titre-titre-liste"><span id="menu3">Toutes les séries</span>
 						<div>
@@ -44,6 +44,7 @@
 		<script type="text/x-template" id="accueil">
 		
 		<div>
+			<!-- conteneur du titre animé -->
 			<div class="conteneur">
 				<div class="conteneur-tete-bloc">
 					<div id="1" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-1">
@@ -88,26 +89,40 @@
 					</div>
 				</div>
 			</div>
-		
+
+			<!-- distanceur -->
+			<div class="bio">
+				<p class="bio-spe">~</p>
+				<p class="bio-texte">{{ texte.dist1 }}
+				</p>
+				<p class="bio-spe">&#x2335;</p>
+			</div>
 
 
 			<!-- biographie courte -->
-			<div class="bio">
-				<p class="bio-spe">~</p>
+			<div id="bio" class="bio">
+				
 				<p class="bio-texte">{{ texte.bio }}
 				</p>
-				<p class="bio-spe">~</p>
+				<p class="bio-spe">&#x2335;</p>
 			</div>
 
 			<!-- vignettes series -->
 
-			<div class="conteneur_series">
+			<div id="conteneur_series" class="conteneur_series">
 				<router-link v-for="cle in cles" :to="cle.dir" class="conteneur_series-vignette">
 					<h3>{{ cle.nom }}</h3>
 					<p class="bio-texte bio-texte-vignette">
 						{{ cle.texte }}
 					</p>
 				</router-link>
+			</div>
+
+			<div id="deco" class="bio">
+				<p class="bio-spe">&#x2335;</p>
+				<p class="bio-texte">{{ texte.deco }}
+				</p>
+				<p class="bio-spe">&#x2335;</p>
 			</div>
 		</div>
 		</script>
@@ -120,8 +135,13 @@
 				<div class="galerie-grand-fleche">
 					<div class="galerie-grand-fleche-gauche" @click="passeGauche()"></div>
 				</div>
-				<div class="galerie-grand-img">
-					<img id="grand" class="galerie-grand-img-img" :src="imageactuelle.img" />
+				<div class="galerie-grand-img" :style="imagedefond">
+					<img 
+						id="grand" 
+						class="galerie-grand-img-img" 
+						:src="imageactuelle.img"
+						:style="imageactuelle.style"
+						/>
 				</div>
 				<div class="galerie-grand-fleche">
 					<div class="galerie-grand-fleche-droite" @click="passeDroite()"></div>
@@ -161,5 +181,44 @@
 		<script src="codes/fr.js"></script>
 		<script src="codes/content.js"></script>
 		<script src="codes/vue.js"></script>
+		<script>
+			window.addEventListener('scroll', () => {
+				const scrollable = document.documentElement.scrollHeight - window.innerHeight; // 568
+
+				const niveau = window.scrollY; // 420 pour serie 0.73
+
+				if ( niveau/scrollable > 0.2) {
+					const e = document.getElementById("bio");
+					e.style.opacity = '1';
+					e.style.transition = "opacity 2s ease";
+				}
+				else if ( niveau/scrollable < 0.2) {
+					const e = document.getElementById("bio");
+					e.style.opacity = '0';
+					e.style.transition = "opacity 1s ease";
+				}
+
+				if ( niveau/scrollable > 0.5) {
+					const e = document.getElementById("conteneur_series");
+					e.style.opacity = '1';
+					e.style.transition = "opacity 2s ease";
+				}
+				else if ( niveau/scrollable < 0.5) {
+					const e = document.getElementById("conteneur_series");
+					e.style.opacity = '0';
+					e.style.transition = "opacity 1s ease";
+				}
+				if ( niveau/scrollable > 0.7) {
+					const e = document.getElementById("deco");
+					e.style.opacity = '1';
+					e.style.transition = "opacity 2s ease";
+				}
+				else if ( niveau/scrollable < 0.7) {
+					const e = document.getElementById("deco");
+					e.style.opacity = '0';
+					e.style.transition = "opacity 1s ease";
+				}
+			})
+		</script>
 	</body>
 </html>

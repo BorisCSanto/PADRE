@@ -65,6 +65,8 @@ a {
                     &:hover div {
                         display: block;
                         color: $couleur_titre;
+                        background-color:white;
+                        border-radius: 3px;
                     }
                 }
 
@@ -73,7 +75,7 @@ a {
        
        &-bloc {
             width: 80%; 
-            margin: auto;
+            margin: 5% auto;
             text-align: center;;
             &-tapis {
                 display: inline-block;
@@ -107,6 +109,10 @@ a {
     }
 }
 
+#conteneur_series {
+    opacity: 0;
+}
+
 .conteneur_series {
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -116,12 +122,25 @@ a {
 
     &-vignette {
         background-color: $couleur_secondaire;
+        border-radius: 6px;
+        box-shadow: 8px 4px 5px #e078f5;
         h3 {
             text-align: center;
         }
+
+        &:hover {
+            box-shadow: none;
+            margin-left: 8px;
+            margin-right: -8px;
+            margin-top: 4px;
+            margin-bottom: -4px;
+            background-color: $couleur_tertiaire;
+        }
     }
 }
-
+#bio {
+    opacity: 0;
+}
 .bio {
     width: 80%;
     margin: auto;
@@ -139,8 +158,8 @@ a {
         }
     }
     &-spe {
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        margin: 0;
+        font-family: "Ubuntu", 'Times New Roman', Times, serif;
+        margin: 5%;
         text-align: center;
         font-size: 150px;
     }
@@ -153,15 +172,20 @@ a {
     gap: 50px;
     &-grand {
         display: grid;
-        grid-template-columns: 2fr 4fr 2fr;
-        grid-template-rows: 500px;
+        grid-template-columns: 1fr 4fr 1fr;
+        grid-template-rows: 60vh;
         gap: 50px;
         
         &-img {
             grid-column: 2;
-            height: 300px;
-            text-align: center;
+            height: 100%;
+            background-image: url("../images/fond.jpg");
+            background-size: cover;
+            position: relative;
             &-img {
+                position: absolute;
+                border: 5px solid $couleur_tertiaire;
+                box-shadow: -8px 4px 5px grey;
                 max-height: 100%;
                 max-width: 100%;
             }
@@ -174,13 +198,13 @@ a {
 
             &-gauche {
                 margin: auto;
-                border: 100px solid white;
+                border: 50px solid white;
                 border-right-color: $couleur_secondaire;
             }
 
             &-droite {
                 margin: auto;
-                border: 100px solid white;
+                border: 50px solid white;
                 border-left-color: $couleur_secondaire;
             }
 
@@ -190,8 +214,8 @@ a {
     }
 
     &-miniatures {
-        border-top: 10px solid black;
-        border-bottom: 10px solid black;
+        border-top: 10px solid $couleur_secondaire;
+        border-bottom: 10px solid $couleur_secondaire;
         vertical-align: middle;
         #galerie {
             display: flex;
