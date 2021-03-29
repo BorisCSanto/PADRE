@@ -40,7 +40,7 @@ a {
                 color: inherit;
                 text-decoration: none;
                 font-weight: bold;
-                font-size: 20px;
+                font-size: $taille1;
                 text-align: center;
                 padding: 10px 0 10px 0;
                 border-radius: 3px;
@@ -258,6 +258,63 @@ a {
             &-mini {
                 max-height: 100%;
                 max-width: 150px;
+            }
+        }
+    }
+}
+
+.contact {
+    width: 80%;
+    margin: auto;
+
+    &-form {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3%;
+
+        &-item {
+            width: 30%;
+            margin-top: 5%;
+
+            label {
+                font-weight: bold;
+                font-size: $taille1;
+                color: $couleur_secondaire;
+            }
+
+            input, textarea {
+                margin-top: 2%;
+                width: 100%;
+            }
+
+            &-texte {
+                width: 60%;
+                height: 30vh;
+
+                textarea {
+                    height: 100%;
+                    border-radius: 6px;
+                    font-size: $taille1;
+                    padding: 5px;
+                }
+            }
+
+            .envoyer {
+                margin-top: 20%;
+                width: 50%;
+                padding: 20px;
+                background-color: $couleur_secondaire;
+                color: white;
+                font-weight: bold;
+                font-size: $taille1;
+                margin-left: 30%;
+                border: none;
+                border-radius: 6px;
+
+                &:hover {
+                    background-color: $couleur_tertiaire;
+                    cursor: pointer;
+                }
             }
         }
     }

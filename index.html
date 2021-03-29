@@ -180,8 +180,28 @@
 
 		<!-- contact et formulaire de contact -->
 		<script type="text/x-template" id="contact">
-			<div>
-				bienvenue dans le formulaire de contact
+			<div class="contact">
+				<form class="contact-form" metoh="post" action="">
+					<div class="contact-form-item">
+						<label for="nom">Votre nom </label>
+						<input type="text" id="nom" name="nom" size="20" maxlength="30" required >
+					</div>
+					<div class="contact-form-item">
+						<label for="pnom">Votre prénom  </label>
+						<input type="text" id="pnom" name="pnom" size="20" maxlength="30" required >
+					</div>
+					<div class="contact-form-item">
+						<label for="mel">Votre mail  </label>
+						<input type="email" id="mel" name="mel" size="20" maxlength="30" required >
+					</div>
+					<div class="contact-form-item contact-form-item-texte">
+						<label for="message">Votre message  </label>
+						<textarea id="message" name="message" maxlength="1000" rows="20" spellcheck='true' placeholder="Votre message ici..." required ></textarea>
+					</div>
+					<div class="contact-form-item">
+						<input class="envoyer" type="submit" value="Envoyer">
+					</div>
+				</form>
 			</div>
 		</script>
 
@@ -196,9 +216,5 @@
 		<script src="codes/fr.js"></script>
 		<script src="codes/content.js"></script>
 		<script src="codes/vue.js"></script>
-
-		<!-- script pour le scroll event -->
-		<script>
-		</script>
 	</body>
 </html>
