@@ -113,7 +113,7 @@
 			<!-- vignettes series -->
 
 			<div id="conteneur_series" class="conteneur_series">
-				<router-link v-for="cle in cles" :to="cle.dir" class="conteneur_series-vignette">
+				<router-link v-for="cle in cles" :key="cle.nom" :to="cle.dir" class="conteneur_series-vignette">
 					<h3>{{ cle.nom }}</h3>
 					<p class="bio-texte bio-texte-vignette">
 						{{ cle.texte }}
@@ -203,7 +203,7 @@
 				const scrollable = document.documentElement.scrollHeight - window.innerHeight; // 568
 
 				const niveau = window.scrollY; // 420 pour serie 0.73
-
+				
 				if ( niveau/scrollable > 0.2) {
 					const e = document.getElementById("bio");
 					e.style.opacity = '1';
