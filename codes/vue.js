@@ -7,6 +7,51 @@ const accueil = {
             cles,
             texte
         }
+    },
+    methods: {
+        scrolle () {
+				const scrollable = document.documentElement.scrollHeight - window.innerHeight; // 568
+                console.log(scrollable)
+				const niveau = window.scrollY; // 420 pour serie 0.73
+				
+				if ( niveau/scrollable > 0.2) {
+					const e = document.getElementById("bio");
+					e.style.opacity = '1';
+					e.style.transition = "opacity 2s ease";
+				}
+				else if ( niveau/scrollable < 0.2) {
+					const e = document.getElementById("bio");
+					e.style.opacity = '0';
+					e.style.transition = "opacity 1s ease";
+				}
+
+				if ( niveau/scrollable > 0.5) {
+					const e = document.getElementById("conteneur_series");
+					e.style.opacity = '1';
+					e.style.transition = "opacity 2s ease";
+				}
+				else if ( niveau/scrollable < 0.5) {
+					const e = document.getElementById("conteneur_series");
+					e.style.opacity = '0';
+					e.style.transition = "opacity 1s ease";
+				}
+				if ( niveau/scrollable > 0.7) {
+					const e = document.getElementById("deco");
+					e.style.opacity = '1';
+					e.style.transition = "opacity 2s ease";
+				}
+				else if ( niveau/scrollable < 0.7) {
+					const e = document.getElementById("deco");
+					e.style.opacity = '0';
+					e.style.transition = "opacity 1s ease";
+				}
+        }
+    },
+    mounted () {
+        document.addEventListener('scroll', this.scrolle)
+    },
+    destroyed () {
+        document.removeEventListener('scroll', this.scrolle)
     }
 }
 
