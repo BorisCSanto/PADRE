@@ -195,6 +195,13 @@ a {
   background-color: rgba(250, 250, 250, 0.4);
 }
 
+.nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
 .conteneur-tete {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -212,7 +219,7 @@ a {
   -ms-grid-columns: (1fr)[5];
       grid-template-columns: repeat(5, 1fr);
   color: #118cc5;
-  padding: 2% 0 2% 0;
+  padding: 10px 0 10px 0;
   background-color: white;
 }
 
@@ -435,7 +442,6 @@ a {
       grid-template-columns: 1fr 4fr 1fr;
   -ms-grid-rows: 60vh;
       grid-template-rows: 60vh;
-  gap: 50px;
 }
 
 .galerie-grand-img {
@@ -449,7 +455,6 @@ a {
 
 .galerie-grand-img-img {
   position: absolute;
-  border: 5px solid #b40e61;
   -webkit-box-shadow: -8px 4px 5px rgba(0, 0, 0, 0.5);
           box-shadow: -8px 4px 5px rgba(0, 0, 0, 0.5);
   max-height: 100%;
@@ -469,14 +474,28 @@ a {
 
 .galerie-grand-fleche-gauche {
   margin: auto;
-  border: 50px solid white;
-  border-right-color: #b40e61;
+  border-left: 50px solid transparent;
+  border-right: 50px solid #b40e61;
+  border-top: 25vh solid transparent;
+  border-bottom: 25vh solid transparent;
+  border-radius: 10px;
+}
+
+.galerie-grand-fleche-gauche:hover {
+  cursor: pointer;
 }
 
 .galerie-grand-fleche-droite {
   margin: auto;
-  border: 50px solid white;
-  border-left-color: #b40e61;
+  border-right: 50px solid transparent;
+  border-left: 50px solid #b40e61;
+  border-top: 25vh solid transparent;
+  border-bottom: 25vh solid transparent;
+  border-radius: 10px;
+}
+
+.galerie-grand-fleche-droite:hover {
+  cursor: pointer;
 }
 
 .galerie-miniatures {

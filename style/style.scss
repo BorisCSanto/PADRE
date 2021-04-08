@@ -26,6 +26,11 @@ a {
     background-color: $couleur_brouillard;
 
 }
+.nav {
+    position: sticky;
+    top:0;
+    z-index: 10;
+}
 .conteneur {
     &-tete {
         display: flex;
@@ -37,7 +42,7 @@ a {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
             color: $couleur_titre;
-            padding: 2% 0 2% 0;
+            padding: 10px 0 10px 0;
             background-color: white;
 
             &-logo {
@@ -219,7 +224,6 @@ a {
         display: grid;
         grid-template-columns: 1fr 4fr 1fr;
         grid-template-rows: 60vh;
-        gap: 50px;
         
         &-img {
             grid-column: 2;
@@ -229,7 +233,7 @@ a {
             position: relative;
             &-img {
                 position: absolute;
-                border: 5px solid $couleur_secondaire;
+                //border: 5px solid $couleur_secondaire;
                 box-shadow: -8px 4px 5px rgba(0, 0, 0,0.5);
                 max-height: 100%;
                 max-width: 100%;
@@ -243,14 +247,28 @@ a {
 
             &-gauche {
                 margin: auto;
-                border: 50px solid white;
-                border-right-color: $couleur_secondaire;
+                border-left: 50px solid transparent;
+                border-right: 50px solid $couleur_secondaire;
+                border-top: 25vh solid transparent;
+                border-bottom: 25vh solid transparent;
+                border-radius: 10px;
+                
+                &:hover {
+                    cursor: pointer;
+                }
             }
 
             &-droite {
                 margin: auto;
-                border: 50px solid white;
-                border-left-color: $couleur_secondaire;
+                border-right: 50px solid transparent;
+                border-left: 50px solid $couleur_secondaire;
+                border-top: 25vh solid transparent;
+                border-bottom: 25vh solid transparent;
+                border-radius: 10px;
+
+                &:hover {
+                    cursor: pointer;
+                }
             }
 
             
