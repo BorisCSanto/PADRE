@@ -8,6 +8,13 @@
 
 body {
     font-family: "Ubuntu";
+    background-image: url("../images/fond/fond4.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: auto;
+    padding: 0;
+    margin: 0;
 }
 
 a {
@@ -15,6 +22,10 @@ a {
     color: inherit;
 }
 
+.ensemble {
+    background-color: $couleur_brouillard;
+
+}
 .conteneur {
     &-tete {
         display: flex;
@@ -27,6 +38,7 @@ a {
             grid-template-columns: repeat(5, 1fr);
             color: $couleur_titre;
             padding: 2% 0 2% 0;
+            background-color: white;
 
             &-logo {
                 margin: auto;
@@ -150,7 +162,7 @@ a {
     &-vignette {
         background-color: $couleur_secondaire;
         border-radius: 6px;
-        box-shadow: 8px 4px 5px #e078f5;
+        box-shadow: 8px 4px 5px #5c5b5b;
         h3 {
             text-align: center;
         }
@@ -171,6 +183,11 @@ a {
 .bio {
     width: 80%;
     margin: auto;
+    &-brouillard {
+        background-color: $couleur_brouillard;
+        border-radius: 15px;
+        box-shadow: 3px 3px 3px $couleur_brouillard, -3px -3px 3px $couleur_brouillard ;
+    }   
     &-texte {
         text-align: center;
         font-style: italic;
@@ -179,7 +196,6 @@ a {
         line-height: 50px;
         letter-spacing: 5px;
         word-spacing: 20px;
-
         &-vignette {
             color: white;
         }
@@ -192,6 +208,8 @@ a {
     }
     
 }
+
+
 
 .galerie {
     display: flex;

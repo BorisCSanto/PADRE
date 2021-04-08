@@ -15,206 +15,208 @@
 		<meta property="og:image" content="" />
 	</head>
 	<body>
-		<!-- Conteneur de l'entete -->
-		<div class="conteneur" id="app">
-			<div class="conteneur-tete">
-				<nav class="conteneur-tete-titre">
-					<div class="conteneur-tete-titre-logo">
-						<router-link to="/">L <span style="font-size: 60px;margin-left: -20%">L</span> <span style="margin-left: -20%;">G</span></router-link>
-					</div>
-					<router-link id="menu1" to="/interieur" class="conteneur-tete-titre-titre">Déco d'intérieur</router-link>
-					<router-link id="menu2" to="/contact" class="conteneur-tete-titre-titre">Contact</router-link>
-					<div class="conteneur-tete-titre-titre conteneur-tete-titre-titre-liste"><span id="menu3">Toutes les séries</span>
-						<div>
-						<router-link to="/galerie/0">Série 1</router-link>
-						<router-link to="/galerie/1">Série 2</router-link>
-						<router-link to="/galerie/2">Série 3</router-link>
+		<div class="ensemble">
+			<!-- Conteneur de l'entete -->
+			<div class="conteneur" id="app">
+				<div class="conteneur-tete">
+					<nav class="conteneur-tete-titre">
+						<div class="conteneur-tete-titre-logo">
+							<router-link to="/">L <span style="font-size: 60px;margin-left: -20%">L</span> <span style="margin-left: -20%;">G</span></router-link>
+						</div>
+						<router-link id="menu1" to="/interieur" class="conteneur-tete-titre-titre">Déco d'intérieur</router-link>
+						<router-link id="menu2" to="/contact" class="conteneur-tete-titre-titre">Contact</router-link>
+						<div class="conteneur-tete-titre-titre conteneur-tete-titre-titre-liste"><span id="menu3">Toutes les séries</span>
+							<div>
+							<router-link to="/galerie/0">Série 1</router-link>
+							<router-link to="/galerie/1">Série 2</router-link>
+							<router-link to="/galerie/2">Série 3</router-link>
+							</div>
+						</div>
+						<div class="conteneur-tete-titre-icon">
+							<!-- script à completer pour changement de langue, onclick event-->
+							<div class="conteneur-tete-titre-icon-img"><img alt="fr"src="icones/fr.png" /></div>
+							<div class="conteneur-tete-titre-icon-img"><img alt="ar"src="icones/ar.png" /></div>
+							<div class="conteneur-tete-titre-icon-img"><img alt="en"src="icones/en.png" /></div>
+							<div class="conteneur-tete-titre-icon-img"><img alt="sp"src="icones/sp.png" /></div>
+						</div>
+					</nav>
+					<router-view></router-view>
+				</div>
+			</div>
+
+				<!-- page d'accueil -->
+			<script type="text/x-template" id="accueil">
+			
+			<div>
+				<!-- conteneur du titre animé -->
+				<div class="conteneur">
+					<div class="conteneur-tete-bloc">
+						<div id="1" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-1">
+							L
+						</div>
+						<div id="2" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-2">
+							o
+						</div>
+						<div id="3" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-3">
+							ï
+						</div>
+						<div id="4" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-4">
+							c
+						</div>
+						<br>
+						<div id="5" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-1">
+							L
+						</div>
+						<div id="6" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-2">
+							e
+						</div>
+						<div id="7" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-2">
+							
+						</div>
+						<div id="8" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-3">
+							G
+						</div>
+						<div id="9" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-4">
+							u
+						</div>
+						<div id="10" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-5">
+							é
+						</div>
+						<div id="11" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-6">
+							v
+						</div>
+						<div id="12" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-6">
+							e
+						</div>
+						<div id="13" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-7 ">
+							L
 						</div>
 					</div>
-					<div class="conteneur-tete-titre-icon">
-						<!-- script à completer pour changement de langue, onclick event-->
-						<div class="conteneur-tete-titre-icon-img"><img alt="fr"src="icones/fr.png" /></div>
-						<div class="conteneur-tete-titre-icon-img"><img alt="ar"src="icones/ar.png" /></div>
-						<div class="conteneur-tete-titre-icon-img"><img alt="en"src="icones/en.png" /></div>
-						<div class="conteneur-tete-titre-icon-img"><img alt="sp"src="icones/sp.png" /></div>
-					</div>
-				</nav>
-				<router-view></router-view>
-			</div>
-		</div>
-
-			<!-- page d'accueil -->
-		<script type="text/x-template" id="accueil">
-		
-		<div>
-			<!-- conteneur du titre animé -->
-			<div class="conteneur">
-				<div class="conteneur-tete-bloc">
-					<div id="1" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-1">
-						L
-					</div>
-					<div id="2" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-2">
-						o
-					</div>
-					<div id="3" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-3">
-						ï
-					</div>
-					<div id="4" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-4">
-						c
-					</div>
-					<br>
-					<div id="5" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-1">
-						L
-					</div>
-					<div id="6" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-2">
-						e
-					</div>
-					<div id="7" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-2">
-						
-					</div>
-					<div id="8" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-3">
-						G
-					</div>
-					<div id="9" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-4">
-						u
-					</div>
-					<div id="10" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-5">
-						é
-					</div>
-					<div id="11" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-6">
-						v
-					</div>
-					<div id="12" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-6">
-						e
-					</div>
-					<div id="13" class="conteneur-tete-bloc-tapis conteneur-tete-bloc-tapis-7 ">
-						L
-					</div>
 				</div>
-			</div>
 
-			<!-- distanceur -->
-			<div class="bio">
-				<p class="bio-spe">~</p>
-				<p class="bio-texte">{{ texte.dist1 }}
-				</p>
-				<p class="bio-spe">&#x2335;</p>
-			</div>
-
-
-			<!-- biographie courte -->
-			<div id="bio" class="bio">
-				
-				<p class="bio-texte">{{ texte.bio }}
-				</p>
-				<p class="bio-spe">&#x2335;</p>
-			</div>
-
-			<!-- vignettes series -->
-
-			<div id="conteneur_series" class="conteneur_series">
-				<router-link v-for="cle in cles" :key="cle.nom" :to="cle.dir" class="conteneur_series-vignette">
-					<h3>{{ cle.nom }}</h3>
-					<p class="bio-texte bio-texte-vignette">
-						{{ cle.texte }}
-					</p>
-				</router-link>
-			</div>
-
-			<!-- presentation deco d'interieur -->
-			<div id="deco" >
+				<!-- distanceur -->
 				<div class="bio">
-					<p class="bio-spe">&#x2335;</p>
-					<p class="bio-texte">{{ texte.deco }}
+					<p class="bio-spe">~</p>
+					<p class="bio-texte bio-brouillard">{{ texte.dist1 }}
 					</p>
 					<p class="bio-spe">&#x2335;</p>
 				</div>
-				<div class="conteneur_series">
-					<div></div>
-					<router-link to="/interieur" class="conteneur_series-vignette">
+
+
+				<!-- biographie courte -->
+				<div id="bio" class="bio">
+					
+					<p class="bio-texte bio-brouillard">{{ texte.bio }}
+					</p>
+					<p class="bio-spe">&#x2335;</p>
+				</div>
+
+				<!-- vignettes series -->
+
+				<div id="conteneur_series" class="conteneur_series">
+					<router-link v-for="cle in cles" :key="cle.nom" :to="cle.dir" class="conteneur_series-vignette">
+						<h3>{{ cle.nom }}</h3>
 						<p class="bio-texte bio-texte-vignette">
-							Hôtel virtuel
+							{{ cle.texte }}
 						</p>
 					</router-link>
 				</div>
-			</div>
 
+				<!-- presentation deco d'interieur -->
+				<div id="deco" >
+					<div class="bio">
+						<p class="bio-spe">&#x2335;</p>
+						<p class="bio-texte bio-brouillard">{{ texte.deco }}
+						</p>
+						<p class="bio-spe">&#x2335;</p>
+					</div>
+					<div class="conteneur_series">
+						<div></div>
+						<router-link to="/interieur" class="conteneur_series-vignette">
+							<p class="bio-texte bio-texte-vignette">
+								Hôtel virtuel
+							</p>
+						</router-link>
+					</div>
+				</div>
+
+			</div>
+			</script>
+
+			<!-- galerie images -->
+			<script type="text/x-template" id="galerie">
+			<div class="galerie">
+				<!-- grande image -->
+				<div class="galerie-grand">
+					<div class="galerie-grand-fleche">
+						<div class="galerie-grand-fleche-gauche" @click="passeGauche()"></div>
+					</div>
+					<div class="galerie-grand-img" :style="imagedefond">
+						<img 
+							id="grand" 
+							class="galerie-grand-img-img" 
+							:src="imageactuelle.img"
+							:style="imageactuelle.style"
+							/>
+					</div>
+					<div class="galerie-grand-fleche">
+						<div class="galerie-grand-fleche-droite" @click="passeDroite()"></div>
+					</div>
+				</div>
+				<!-- galerie de miniatures cliquables -->
+				<div class="galerie-miniatures">
+					<div id="galerie">
+						<div v-for="(oeuv, index) in serieaprendre" class="galerie-miniatures-img" @click="change(index)" ><img class="galerie-miniatures-img-mini" :src="oeuv.img" /></div>
+					</div>
+				</div>
+			</div>
+			</script>
+
+			<!-- décoration d'intérieur -->
+			<script type="text/x-template" id="interieur">
+				<div>
+					bienvenue à la déco d'interieur
+				</div>
+			</script>
+
+			<!-- contact et formulaire de contact -->
+			<script type="text/x-template" id="contact">
+				<div class="contact">
+					<form class="contact-form" metoh="post" action="">
+						<div class="contact-form-item">
+							<label for="nom">Votre nom </label>
+							<input type="text" id="nom" name="nom" size="20" maxlength="30" required >
+						</div>
+						<div class="contact-form-item">
+							<label for="pnom">Votre prénom  </label>
+							<input type="text" id="pnom" name="pnom" size="20" maxlength="30" required >
+						</div>
+						<div class="contact-form-item">
+							<label for="mel">Votre mail  </label>
+							<input type="email" id="mel" name="mel" size="20" maxlength="30" required >
+						</div>
+						<div class="contact-form-item contact-form-item-texte">
+							<label for="message">Votre message  </label>
+							<textarea id="message" name="message" maxlength="1000" rows="20" spellcheck='true' placeholder="Votre message ici..." required ></textarea>
+						</div>
+						<div class="contact-form-item">
+							<input class="envoyer" type="submit" value="Envoyer">
+						</div>
+					</form>
+				</div>
+			</script>
+
+			<footer>
+				<div>Apropos - mentions légales</div>
+				<div>Copyright</div>
+				<div>Conception</div>
+			</footer>
+
+			<script src="codes/dist.js"></script>
+			<script src="codes/router.js"></script>
+			<script src="codes/fr.js"></script>
+			<script src="codes/content.js"></script>
+			<script src="codes/vue.js"></script>
 		</div>
-		</script>
-
-		<!-- galerie images -->
-		<script type="text/x-template" id="galerie">
-		<div class="galerie">
-			<!-- grande image -->
-			<div class="galerie-grand">
-				<div class="galerie-grand-fleche">
-					<div class="galerie-grand-fleche-gauche" @click="passeGauche()"></div>
-				</div>
-				<div class="galerie-grand-img" :style="imagedefond">
-					<img 
-						id="grand" 
-						class="galerie-grand-img-img" 
-						:src="imageactuelle.img"
-						:style="imageactuelle.style"
-						/>
-				</div>
-				<div class="galerie-grand-fleche">
-					<div class="galerie-grand-fleche-droite" @click="passeDroite()"></div>
-				</div>
-			</div>
-			<!-- galerie de miniatures cliquables -->
-			<div class="galerie-miniatures">
-				<div id="galerie">
-					<div v-for="(oeuv, index) in serieaprendre" class="galerie-miniatures-img" @click="change(index)" ><img class="galerie-miniatures-img-mini" :src="oeuv.img" /></div>
-				</div>
-			</div>
-		</div>
-		</script>
-
-		<!-- décoration d'intérieur -->
-		<script type="text/x-template" id="interieur">
-			<div>
-				bienvenue à la déco d'interieur
-			</div>
-		</script>
-
-		<!-- contact et formulaire de contact -->
-		<script type="text/x-template" id="contact">
-			<div class="contact">
-				<form class="contact-form" metoh="post" action="">
-					<div class="contact-form-item">
-						<label for="nom">Votre nom </label>
-						<input type="text" id="nom" name="nom" size="20" maxlength="30" required >
-					</div>
-					<div class="contact-form-item">
-						<label for="pnom">Votre prénom  </label>
-						<input type="text" id="pnom" name="pnom" size="20" maxlength="30" required >
-					</div>
-					<div class="contact-form-item">
-						<label for="mel">Votre mail  </label>
-						<input type="email" id="mel" name="mel" size="20" maxlength="30" required >
-					</div>
-					<div class="contact-form-item contact-form-item-texte">
-						<label for="message">Votre message  </label>
-						<textarea id="message" name="message" maxlength="1000" rows="20" spellcheck='true' placeholder="Votre message ici..." required ></textarea>
-					</div>
-					<div class="contact-form-item">
-						<input class="envoyer" type="submit" value="Envoyer">
-					</div>
-				</form>
-			</div>
-		</script>
-
-		<footer>
-			<div>Apropos - mentions légales</div>
-			<div>Copyright</div>
-			<div>Conception</div>
-		</footer>
-
-		<script src="codes/dist.js"></script>
-		<script src="codes/router.js"></script>
-		<script src="codes/fr.js"></script>
-		<script src="codes/content.js"></script>
-		<script src="codes/vue.js"></script>
 	</body>
 </html>
